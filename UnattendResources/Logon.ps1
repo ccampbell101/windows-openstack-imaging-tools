@@ -141,6 +141,7 @@ function Install-WindowsUpdates {
     #Note (cgalan): Some updates are black-listed as they are either failing to install or superseded by the newer updates.
     $KBIdsBlacklist = @{
         "6.3" = @("KB2887595")
+        "6.1" = @("KB915597", "KB2483139")
     }
     $excludedUpdates = $KBIdsBlacklist[$OSKernelVersion]
     $updates = ExecRetry {
